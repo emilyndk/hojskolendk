@@ -14,6 +14,7 @@ export default {
         },
         yellow: {
           500: '#FFFDF4',
+          450: '#FFFDF4CC',
         },
         neutral: {
           950: '#1A1A1A',

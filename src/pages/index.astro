@@ -2,24 +2,31 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Card from "../components/Card.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 <MainLayout>
 
-	
-<Card 
-  header="CARIBIEN HAWAII MEXICO" 
-  text="This is a single view card." 
-  bgImg=""
-  url="/signup" 
-  view="destinationer" 
+
+<Accordion
+title="Hvor mange elever er der p[ et hold?"
+text="De fleste af vores højskoleophold i udlandet ender med at være fyldte og dermed helt udsolgte ift. pladser. Man rejser derfor oftest 30-40 elever sammen med en (dansk) rejseleder og 1-2 (danske) undervisere fra HÖJSKOLENDK. Nogle gange har vi også mindre hold afsted, og så rejser man afsted med 15-20 andre skønne elever. Det kan variere en smule alt efter hvilket ophold man vælger, årstiden man rejser i, etc. Vores minimum antal elever er 10 – og dét er stadig kæmpefedt og et skønt højskole-eventyr.;S"
+
 />
 
 <Card 
-  header="List View Header" 
-  text="This is a list view card." 
-  cardimg="/path/to/image.jpg" 
-  cardimgalt="Image description" 
-  url="/readmore" 
+  header={`CARIBIEN\nHAWAII\nMEXICO`} 
+  text="Nordamerika Mellemamerika"
+  bgImg="/images/midlertidig-card-img.jpg"
+  url="" 
+  view="destinationer" 
+/>
+
+
+<Card 
+  header="KULTURFORSTÅELSE" 
+  text="ALLE DESTINATIONER"
+  bgImg="/images/midlertidig-card-img.jpg"
+  url=""
   view="aktiviteter" 
 />
 
