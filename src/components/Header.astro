@@ -1,6 +1,42 @@
 ---
+
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div>
-    
+
+<div x-data="{ showmenu: false }" class=" py-section-72 fixed top-0 w-full z-50" >
+    <div id="navbar" class="px-section-72">
+  <nav id="desktopmenu" class=" hidden lg:block border border-yellow-500 rounded-r rounded-l">
+      <div class="flex lg:justify-between items-center pl-section-72 p-padding-y">
+        <img class="w-1/4" src="/public/svg/logo.svg" alt="logo">
+        <ul class="flex flex-row justify-end gap-x-section-72 px-section-72">
+          <li class="relative text-center">
+            <a href="/" class="block text-yellow-500 hover:text-orange-500 font-poppins text-body-nav-desktop ">Højskoleophold</a>
+          </li>
+          <li class="relative text-center">
+            <a href="/" class="block text-yellow-500 hover:text-orange-500 font-poppins text-body-nav-desktop ">Infomøde</a>
+          </li>
+          <li class="relative text-center">
+            <a href="/" class="block text-yellow-500 hover:text-orange-500 font-poppins text-body-nav-desktop">Tilmeld</a>
+          </li>
+          <img class="w-[3%]" src="/public/svg/search.svg" alt="search icon">
+        </ul>
+       
+      </div>
+    </nav>
+    <button id="burgermenu" class="lg:hidden text-[var(--secondary-color-100)] self-center pt-3 pl-3 z-50 " x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+  </button>
+  
+  <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
+  x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <ul class="text-[var(--secondary-color-100)]" >
+    <a href="/"><li class="text-center py-2 border-y-2 background">FORSIDE</li></a>
+    <a href="/#info"><li class="text-center py-2 border-b-2 background">INFO</li></a>
+    <a href="/howto"><li class="text-center py-2 border-b-2 background">HOW TO</li></a>
+    <a href="/resourcer"><li class="text-center py-2 border-b-2 background">RESSOURCER</li></a>
+    <a href="/registrering"><li class="text-center py-2 border-b-2 font-bold bg-[var(--accent-color-300)] text-[var(--primary-color-100)]">DELTAG</li></a>
+  </ul>
+  </nav>
+  </div>
+  
+  

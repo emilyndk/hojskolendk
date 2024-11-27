@@ -25,6 +25,8 @@ export default {
         'card-106': '106px',
         'card-124': '124px',
         'section-72': '72px',
+        'padding-y': '16px',
+        
         
       },
   
@@ -56,7 +58,7 @@ export default {
       extend: {
         fontSize: {
           // Display
-          'desktop-hero': ['45px', { lineHeight: '140%' }],
+          'desktop-hero': ['138px', { lineHeight: '140%' }],
           'display-mobile-hero': ['45px', { lineHeight: '140%'  }],
           'display-mobile-card': ['48px', { lineHeight: '67px' }],
           'display-mobile-card': ['32px', { lineHeight: '30px'}],
@@ -104,6 +106,7 @@ export default {
             'button-desktop-y': '10px',  // vertikal padding til desktop
             'button-mobile-x': '40px',   // horisontal padding til mobil
             'button-mobile-y': '12px',   // vertikal padding til mobil
+
           },
       },
     },
