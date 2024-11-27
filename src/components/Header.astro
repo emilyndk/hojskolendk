@@ -1,6 +1,66 @@
 ---
+
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div>
-    
+
+<div x-data="{ showmenu: false }" class="fixed top-0 w-full z-50" >
+    <div id="navbar" class="p-section-mobile-32  lg:px-section-72 lg:p-padding-y ">
+  <nav id="desktopmenu" class=" hidden lg:block rounded-r rounded-l bg-yellow-500 bg-opacity-40">
+      <div class="flex lg:justify-between items-center pl-section-72 p-padding-y">
+        <img class="w-1/4" src="/public/svg/logo.svg" alt="logo">
+        <ul class="flex flex-row justify-end gap-x-section-72 px-section-72">
+          <li class="relative text-center">
+            <a href="/" class="block text-orange-500 hover:text-green-500 font-poppins text-body-nav-desktop ">Højskoleophold</a>
+          </li>
+          <li class="relative text-center">
+            <a href="/" class="block text-orange-500 hover:text-green-500 font-poppins text-body-nav-desktop ">Infomøde</a>
+          </li>
+          <li class="relative text-center">
+            <a href="/" class="block text-orange-500 hover:text-green-500 font-poppins text-body-nav-desktop">Tilmeld</a>
+          </li>
+          <img class="w-[3%]" src="/public/svg/search.svg" alt="search icon">
+        </ul>
+       
+      </div>
+    </nav>
+    <div class="relative">
+        <!-- Mobil Header -->
+        <header class="flex justify-between items-center lg:hidden">
+          <!-- Logo -->
+          <a href="/" class="flex items-center">
+            <img src="/public/svg/logo.svg" alt="Logo" class="">
+          </a>
+      
+          <!-- Burger Menu -->
+          <button id="burgermenu" 
+                  class="text-yellow-500 z-50" 
+                  x-on:click="showmenu = ! showmenu">
+            <img src="/public/svg/closedmenu.svg" alt="Lukket menu" class="w-2/3">
+          </button>
+        </header>
+      
+        <!-- Mobilmenu -->
+        <nav id="mobilmenu" 
+             class="absolute w-full border border-yellow-500 rounded-r rounded-l flex flex-col items-center z-40"
+             x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+          <ul class="w-full text-center">
+            <a href="/">
+              <li class="text-body-nav-mobile text-yellow-500 hover:text-orange-500 font-poppins">
+                Højskoleophold
+              </li>
+            </a>
+            <a href="/#info">
+              <li class="text-body-nav-mobile text-yellow-500 hover:text-orange-500 font-poppins">
+                Infomøde
+              </li>
+            </a>
+            <a href="/howto">
+              <li class="text-body-nav-mobile text-yellow-500 hover:text-orange-500 font-poppins">
+                Tilmeld
+              </li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      
+  
+  

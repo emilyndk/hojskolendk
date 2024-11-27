@@ -1,0 +1,70 @@
+<section 
+  class="relative grid grid-cols-2" 
+  x-data="{ activeSlide: 0, testimonials: [
+    { 
+      text: '“Mit ophold med HöjskolenDk var den største oplevelse i mit liv”', 
+      name: 'Camilla, 24', 
+      details: 'Højskoleophold 2022',
+      profileImg: '/public/images/profile.png',
+      bgImg: '/public/images/testimonial.png'
+    },
+    { 
+      text: '“Mit livs fedeste rejse med de bedste mennesker”', 
+      name: 'Mikkel, 25', 
+      details: 'Højskoleophold 2021',
+      profileImg: '/public/images/profile-1.png',
+      bgImg: '/public/images/testimonial-1.png'
+    },
+    { 
+      text: '“Jeg har fået venner for livet”', 
+      name: 'Isabella, 28', 
+      details: 'Højskoleophold 2021',
+      profileImg: '/public/images/profile-2.png',
+      bgImg: '/public/images/testimonial-2.png'
+    },
+    { 
+      text: '“Gør det - du vil aldrig fortryde det”', 
+      name: 'Sofus, 22', 
+      details: 'Højskoleophold 2023',
+      profileImg: '/public/images/profile-3.png',
+      bgImg: '/public/images/testimonial-4.png'
+    }
+  ]}" 
+  x-init="setInterval(() => { activeSlide = (activeSlide + 1) % testimonials.length }, 5000)"
+>
+  <!-- Venstre Kolonne -->
+  <div class="bg-orange-500 flex flex-col justify-center items-center">
+    <p 
+      class=" text-center px-padding-text-quote font-blissmood text-yellow-500 text-citat-desktop transition-opacity duration-1000 ease-in-out"
+      x-text="testimonials[activeSlide].text"
+      x-show="activeSlide !== null"
+    ></p>
+  </div>
+  
+  <!-- Højre Kolonne -->
+  <div class="flex items-center justify-center">
+    <img 
+      class="w-full object-grow bg-opacity-50 transition-opacity duration-1000 ease-in-out"
+      :src="testimonials[activeSlide].bgImg"
+      :alt="`Baggrund for ${testimonials[activeSlide].name}`"
+    >
+  </div>
+
+  <!-- Overlappende billede og tekst -->
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+    <img 
+      :src="testimonials[activeSlide].profileImg" 
+      alt="Profilbillede" 
+      class="rounded shadow-lg w-32 h-32 transition-opacity duration-1000 ease-in-out"
+    >
+    <h2 
+      class="text-yellow-500 font-poppins text-lg mt-4 transition-opacity duration-1000 ease-in-out"
+      x-text="testimonials[activeSlide].name"
+    ></h2>
+    <p 
+      class="text-yellow-500 font-poppins text-body-desktop-bold transition-opacity duration-1000 ease-in-out"
+      x-text="testimonials[activeSlide].details"
+    ></p>
+  </div>
+</section>
+
