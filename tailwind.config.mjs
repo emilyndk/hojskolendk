@@ -26,6 +26,7 @@ export default {
         'card-124': '124px',
         'section-72': '72px',
         'padding-y': '16px',
+        'section-mobile-32': '32px',
         
         
       },
