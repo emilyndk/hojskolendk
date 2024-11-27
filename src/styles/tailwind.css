@@ -7,3 +7,10 @@
         @apply text-body;
     } */
 }
+
+@font-face {
+    font-family: "blissmood";
+    src: url("/fonts/blissmood.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
