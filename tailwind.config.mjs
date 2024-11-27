@@ -27,7 +27,7 @@ export default {
         'section-72': '72px',
         'padding-y': '16px',
         'section-mobile-32': '32px',
-        
+       
         
       },
   
@@ -85,6 +85,9 @@ export default {
 
           'body-desktop-bold': ['24px', { lineHeight: '31px', fontWeight: '700' }],
           'body-mobile-bold': ['16px', { lineHeight: '25px', fontWeight: '700' }],
+
+          // Qute text
+          'citat-desktop': ['68px',{ lineHeight: '100px', fontWeight: '300' }],
           
          
           
@@ -110,6 +113,8 @@ export default {
             'button-desktop-y': '10px',  // vertikal padding til desktop
             'button-mobile-x': '40px',   // horisontal padding til mobil
             'button-mobile-y': '12px',   // vertikal padding til mobil
+           'padding-text-quote': '90px',
+        
 
           },
       },
