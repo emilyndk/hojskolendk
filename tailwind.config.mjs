@@ -59,15 +59,12 @@ export default {
       extend: {
         fontSize: {
           // Display
-<<<<<<< HEAD
           'display-desktop-hero': ['145px', { lineHeight: '140%' }],
           'display-mobile-hero': ['48px', { lineHeight: '140%'  }],
           'display-desktop-card': ['48px', { lineHeight: '67px' }],
-=======
           'desktop-hero': ['138px', { lineHeight: '140%' }],
           'display-mobile-hero': ['45px', { lineHeight: '140%'  }],
           'display-mobile-card': ['48px', { lineHeight: '67px' }],
->>>>>>> header
           'display-mobile-card': ['32px', { lineHeight: '30px'}],
   
           // Headings H1
