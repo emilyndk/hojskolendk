@@ -25,8 +25,7 @@ export default {
         'card-106': '106px',
         'card-124': '124px',
         'section-72': '72px',
-        h1: '22px',
-        h2: '28px',
+        
       },
   
       fontFamily: {
@@ -97,6 +96,14 @@ export default {
             display: ['Blissmood', 'sans-serif'],
             h1: ['Poppins', 'sans-serif'],
             body: ['Montserrat', 'sans-serif'],
+          },
+
+
+          padding: {
+            'button-desktop-x': '70px', // horisontal padding til desktop
+            'button-desktop-y': '10px',  // vertikal padding til desktop
+            'button-mobile-x': '40px',   // horisontal padding til mobil
+            'button-mobile-y': '12px',   // vertikal padding til mobil
           },
       },
     },
