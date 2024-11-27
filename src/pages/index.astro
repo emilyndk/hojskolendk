@@ -3,9 +3,26 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Card from "../components/Card.astro";
 ---
+<MainLayout>
 
-<MainLayout title="Hojskolendk">
-  <Button type="secondary">TILMELD NU</Button>
+	
+<Card 
+  header="CARIBIEN HAWAII MEXICO" 
+  text="This is a single view card." 
+  bgImg=""
+  url="/signup" 
+  view="destinationer" 
+/>
 
-  <Card cardimg="/svg/logo.svg" cardimgalt="haha" header="hej verden" text="Lorem ipsum dollar">
+<Card 
+  header="List View Header" 
+  text="This is a list view card." 
+  cardimg="/path/to/image.jpg" 
+  cardimgalt="Image description" 
+  url="/readmore" 
+  view="aktiviteter" 
+/>
+
+
+
 </MainLayout>

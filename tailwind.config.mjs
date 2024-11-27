@@ -56,14 +56,14 @@ export default {
       extend: {
         fontSize: {
           // Display
-          'desktop-hero': ['45px', { lineHeight: '140%' }],
-          'display-mobile-hero': ['45px', { lineHeight: '140%'  }],
-          'display-mobile-card': ['48px', { lineHeight: '67px' }],
+          'display-desktop-hero': ['145px', { lineHeight: '140%' }],
+          'display-mobile-hero': ['48px', { lineHeight: '140%'  }],
+          'display-desktop-card': ['48px', { lineHeight: '67px' }],
           'display-mobile-card': ['32px', { lineHeight: '30px'}],
   
           // Headings H1
           'h1-desktop-L': ['46px', { lineHeight: '45px' }],
-          'h1-mobile-Ls': ['34px', { lineHeight: '35px' }],
+          'h1-mobile-L': ['34px', { lineHeight: '35px' }],
           'h1-desktop-S': ['32px', { lineHeight: '37px'}],
           'h1-mobile-S': ['24px', { lineHeight: '34px' }],
   
@@ -113,6 +113,7 @@ export default {
       require('@tailwindcss/forms'),
       require('@tailwindcss/aspect-ratio'),
       require('@tailwindcss/container-queries'),
+      
     ],
   };
   

@@ -1,17 +1,29 @@
 ---
-const {header, text, url="#", cardimg="", cardimgalt=""} = Astro.props
-import Button from "./Button.astro"
-
+// Props modtages her
+const { header, text, url = "#", bgImg = "", view = "destinationer" } = Astro.props;
+import Button from "./Button.astro";
 ---
 
-
-<article>
-<h2>{header}</h2>
-<p>{text}</p>
-<img src={cardimg} alt={cardimgalt}>
-<Button type="primary"><a href="#">TILMELD NU</a></Button>
-<Button type="secondary"><a href="#">LÆS MERE</a></Button>
-
-
-
+<article class={`relative ${view === "destinationer" ? "destinationer-card" : "aktiviteter-card"} bg-cover bg-center`} 
+  style={`background-image: url(${bgImg})`}>
+  
+  <div class="relative p-4 bg-opacity-70 bg-black">
+    {view === "destinationer" ? (
+      <>
+        <h1 class="text-orange-500 text-display-mobile-card font-display">{header}</h1>
+        <p class="text-lg text-white">{text}</p>
+        <Button type="primary">
+          <a href={url}>TILMELD NU</a>
+        </Button>
+      </>
+    ) : (
+      <>
+        <h2 class="text-white">{header}</h2>
+        <p class="text-white">{text}</p>
+        <Button type="secondary">
+          <a href={url}>LÆS MERE</a>
+        </Button>
+      </>
+    )}
+  </div>
 </article>
