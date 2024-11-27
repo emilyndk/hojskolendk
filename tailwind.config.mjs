@@ -113,7 +113,7 @@ export default {
             'button-desktop-y': '10px',  // vertikal padding til desktop
             'button-mobile-x': '40px',   // horisontal padding til mobil
             'button-mobile-y': '12px',   // vertikal padding til mobil
-           'padding-text-quote': '90px',
+           'padding-text-quote': '200px',
         
 
           },
