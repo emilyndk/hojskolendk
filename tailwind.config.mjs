@@ -30,7 +30,7 @@ export default {
       },
   
       fontFamily: {
-        blissmood: ['blissmood', 'sans-serif'],
+        blissmood: ['Blissmood', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
@@ -57,22 +57,22 @@ export default {
       extend: {
         fontSize: {
           // Display
-          'L-hero-desktop': ['45px', { lineHeight: '140%' }],
-          'S-hero-mobile': ['45px', { lineHeight: '140%' }],
-          'L-card-desktop': ['48px', { lineHeight: '67px' }],
-          'S-card-mobile': ['32px', { lineHeight: '30px' }],
+          'desktop-hero': ['45px', { lineHeight: '140%' }],
+          'display-mobile-hero': ['45px', { lineHeight: '140%'  }],
+          'display-mobile-card': ['48px', { lineHeight: '67px' }],
+          'display-mobile-card': ['32px', { lineHeight: '30px'}],
   
           // Headings H1
           'h1-desktop-L': ['46px', { lineHeight: '45px' }],
-          'h1-mobile-S': ['34px', { lineHeight: '35px' }],
-          'h1-alt-desktop-L': ['32px', { lineHeight: '37px' }],
-          'h1-alt-mobile-S': ['24px', { lineHeight: '34px' }],
+          'h1-mobile-Ls': ['34px', { lineHeight: '35px' }],
+          'h1-desktop-S': ['32px', { lineHeight: '37px'}],
+          'h1-mobile-S': ['24px', { lineHeight: '34px' }],
   
           // Headings H2
           'h2-desktop-L': ['46px', { lineHeight: '37px', fontWeight: '300' }],
-          'h2-mobile-L': ['24px', { lineHeight: '30px', fontWeight: '300' }],
-          'h2-desktop-S': ['26px', { lineHeight: '37px', fontWeight: '300' }],
-          'h2-mobile-S': ['22px', { lineHeight: '24px', fontWeight: '300' }],
+          'h2-mobile-L': ['24px', { lineHeight: '30px', fontWeight: '300'}],
+          'h2-desktop-S': ['26px', { lineHeight: '37px', fontWeight: '300'}],
+          'h2-mobile-S': ['22px', { lineHeight: '24px', fontWeight: '300'}],
   
           // Body Text
           'body-desktop-regular': ['16px', { lineHeight: '22px', fontWeight: '300' }],
@@ -92,6 +92,12 @@ export default {
           'button-desktop': ['20px', { lineHeight: '140%' }],
           'button-mobile': ['10px', { lineHeight: '140%' }],
         },
+
+        fontFamily: {
+            display: ['Blissmood', 'sans-serif'],
+            h1: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
       },
     },
   
