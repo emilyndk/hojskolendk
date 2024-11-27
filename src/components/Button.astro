@@ -1,5 +1,20 @@
 ---
+const {type="primary", size="desktop" } = Astro.props;
+
+// gælder for alle //
+const buttonStyling = " text-hvid font-extralight transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-full  border border-hav-10 ";
+const typeClasses ={
+"primary": "bg-blue-90 hover:bg-blue-20 hover:text-blue-90 hover:border-blue-90",
+"secondary": "bg-pink-100 hover:bg-pink-hover hover:text-pink-100 hover:border-pink-100",
+
+
+};
+const sizeClasses={
+    "desktop": " px-2 py-4 text-medium md:text-large md: w-[197px] md:p-4",
+    "mobile": " p-2 text-hvid px-4 text-large ",
+   
+}
+
+
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+<button class:list={[buttonStyling, typeClasses[type], sizeClasses[size]]}><slot /></button>
