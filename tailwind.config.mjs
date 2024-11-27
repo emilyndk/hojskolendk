@@ -7,29 +7,43 @@ export default {
 	theme: {
 
         /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
+        colors: {
+             transparent: 'transparent',
+             current: 'currentColor',
+             'orange': {
+             
+             500: '#FF5E04',
+            
+         },
+         'green': {
+              
+              500: '#2D3F27',
+              
+         },
+         'yellow': {
+              
+              500: '#FFFDF4',
+              
+         },
+         'neutrals': {
+              
+          950: '#1A1A1A',
+          
+     },
+        },
 
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
+        
+        /* Tilføj din egen spacing nedenfor */
+        spacing: {
+            'card-34': '34px',
+            'card-106': '106px',
+            'card-124': '124px',
+            'section-72': '72px',
+            'h1': '22px',
+            'h2': '28px',
+        },
+        
+ 
 
         /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
         // fontFamily: {
@@ -49,22 +63,17 @@ export default {
         //   },
 
         /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
+        borderWidth: {
+            DEFAULT: '1px',
+       //     0: '0px',
+       //     2: '2px',
+        },
+       /* Border radius størrelser herunder */
+        borderRadius: {
+           DEFAULT: '8px',
+            none: '0px',
+        },
 
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
 
 		extend: {
         },
