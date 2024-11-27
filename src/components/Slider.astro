@@ -1,0 +1,24 @@
+---
+// TestimonialSlider.astro
+import TestimonialCard from './Testimonial.astro';
+
+const testimonials = [
+  { name: 'Camilla, 24', text: '“Mit ophold med HöjskolenDk var den største oplevelse i mit liv”', image: '/public/images/profile.png', bgImage: '/public/images/testimonial.png' },
+  { name: 'Mikkel, 25', text: '“En fantastisk oplevelse for mig”', image: '/public/images/profile.png', bgImage: '/public/images/testimonial-1.png' },
+  { name: 'Sofie, 22', text: '“Jeg har lært så meget på opholdet”', image: '/public/images/profile.png', bgImage: '/public/images/testimonial-2.png' },
+  { name: 'Mathias, 23', text: '“Utrolig oplevelse, der har ændret mit liv”', image: '/public/images/profile.png', bgImage: '/public/images/testimonial-4.png' },
+];
+---
+
+<div class="testimonial-slider-wrapper overflow-hidden w-full">
+  <div class="testimonial-slider flex animate-slider">
+    {testimonials.map((testimonial) => (
+      <TestimonialCard 
+        name={testimonial.name} 
+        text={testimonial.text} 
+        image={testimonial.image} 
+        bgImage={testimonial.bgImage}
+      />
+    ))}
+  </div>
+</div>
