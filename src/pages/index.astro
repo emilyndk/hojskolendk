@@ -4,19 +4,18 @@ import Button from '../components/Button.astro';
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Testimonial from "../components/Testimonial.astro";
+import Accordion from "../components/Accordion.astro";
 
 ---
 
 <MainLayout title="Hojskolendk">
 <Hero></Hero>
 
-<Testimonial></Testimonial>
-  <Button type="secondary">TILMELD NU</Button>
+<div class="flex flex-col gap-[0.5rem]">
+<h1 class="mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Destinationer</h1>
+<h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">DIT LIVS EVENTYR VENTER</h2>
+</div>
 
-  <Card cardimg="/svg/logo.svg" cardimgalt="haha" header="hej verden" text="Lorem ipsum dollar">
-
-
-	
 <Card 
   header={`CARIBIEN\nHAWAII\nMEXICO`} 
   text="Nordamerika Mellemamerika"
@@ -24,6 +23,113 @@ import Testimonial from "../components/Testimonial.astro";
   url="" 
   view="destinationer" 
 />
+
+
+<article class=" bg-yellow-450 border rounded border-orange-500 w-[350px] md:w-[900px] p-[30px] mx-auto my-card-34">
+<div class="flex flex-col mb-card-34">
+  <div class="flex flex-col gap-[0.5rem]">
+    <h1 class="text-green-500 mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Højskole i udlandet</h1>
+    <h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">ER DU KLAR TIL DIT LIVS EVENTYR?</h2>
+    </div>
+
+    <p class="mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+
+      Vi er en dansk højskole for dig imellem 18-30år, der ønsker en unik rejseoplevelse, og muligheden for at blive en del af et stort fællesskab, møde nye mennesker og forskellige  kulturer. Derfor laver vi, HöJSKOLENDK, eventyrlige højskoleophold i udlandet. 
+
+HOJSKOLENDK er for dig som synes det er spændende at tage på højskole i udlandet og er vild med tanken om højskolefællesskabet. Ønsker at komme med på et fantastisk rejseeventyr, gerne vil lære om nye kulturer, er vild med tanken om at rejse med rygsæk, drømmer om en fed grupperejse med andre unge og følelsen af et stærkt sammenhold. Det er for dig der ønsker inspirerende og meningsfulde aktiviteter der giver dig noget med hjem og samtidig ønsker en tryg rejseoplevelse hvor vi har taget os af alt det praktiske og ikke skal bekymre dig om forsikring, da vi er medlem af rejsegarantifonden. 
+
+Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse. 
+    </p>
+
+  </div>
+
+  <div class="flex flex-col items-center">
+    <Button class="mx-auto" type="secondary">OM OS</Button>
+  </div>
+
+</article>
+
+<Testimonial></Testimonial>
+ 
+<article class=" bg-yellow-450 border rounded border-orange-500 w-[350px] md:w-[900px] p-[30px] mx-auto my-card-34">
+  <div class="flex flex-col mb-card-34">
+   
+      <h1 class="mb-card-34 text-green-500 mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">5 grunde til at vælge os:</h1>
+      
+     <div class="flex flex-col md:flex-row gap-[0.5rem] mb-card-34 mx-[20px]">
+
+<div class="flex flex-col gap-[0.5rem] items-center">
+  <p class="text-center  mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+    Du bliver en del af et fantastisk fællesskab med et stærkt sammenhold
+       
+  </p>
+
+  <img class="w-1/3 md:w-full mt-card-34" src="/svg/gruppe.svg" alt="Gruppe ikon">
+</div>
+
+<div class="flex flex-col gap-[0.5rem] items-center">
+  <p class="text-center mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+    Du får masser af vilde naturoplevelser, adventure og spændende kulturmøder
+       
+  </p>
+
+  <img class="w-1/3 md:w-full" src="/svg/natur.svg" alt="Natur ikon">
+</div>
+
+<div class="flex flex-col gap-[0.5rem] items-center">
+  <p class=" text-center mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+    Du opdager nye og stærke sider af dig selv, flytter grænser og får mere selvtillid
+       
+  </p>
+
+  <img class="w-1/5 md:w-1/2 mt-[10px]" src="/svg/growth.svg" alt="Plante ikon">
+</div>
+
+<div class="flex flex-col gap-[0.5rem] items-center">
+  <p class="text-center mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+    Du rejser altid med danske passionerede rejseledere og engagerede unde rvisere
+       
+  </p>
+
+  <img class="w-[18%] md:w-1/3" src="/svg/traveler.svg" alt="Rejsende figur ikon">
+</div>
+
+<div class="flex flex-col gap-[0.5rem] items-center">
+  <p class="text-center mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+    Du får et uforglemmeligt, unikt og trygt rejseeventyr for livet 
+       
+  </p>
+
+  <img class="w-1/4 md:w-full mt-[0px]" src="/svg/kort.svg" alt="Kort ikon">
+</div>
+
+     </div>
+
+     <p class="text-center mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
+      Vil du vide mere om hvorfor du skal vælge os? Kom og mød os på vores infomøde.
+         
+    </p>
+
+
+  
+     
+  
+    </div>
+  
+    <div class="flex flex-col items-center">
+      <Button class="mx-auto" type="primary">TILMELD DIG INFOMØDE</Button>
+    </div>
+  
+  </article>
+
+
+  <div class="flex flex-col gap-[0.5rem]">
+    <h1 class="mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Aktiviteter</h1>
+    <h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">HER KAN DU SE DE FORSKELLIGE AKTIVITETER VI TILBYDER PÅ VORES REJSER</h2>
+    </div>
+
+	
+
 
 
 <Card 
@@ -36,10 +142,37 @@ import Testimonial from "../components/Testimonial.astro";
 
 
 
+<div class="flex flex-col items-center md:flex-row">
+<Accordion 
+  title="Forskellige højskoleophold" 
+  text="ALLE DESTINATIONER"
+  
+/>
 
-<Button type="secondary">TILMELD NU</Button>
+<Accordion 
+  title="Forskellige højskoleophold" 
+  text="ALLE DESTINATIONER"
+  
+/>
 
-<Card cardimg="/svg/logo.svg" cardimgalt="haha" header="hej verden" text="Lorem ipsum dollar"></Card>
+
+<Accordion 
+  title="Forskellige højskoleophold" 
+  text="ALLE DESTINATIONER"
+  
+/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
