@@ -1,0 +1,17 @@
+---
+const {header, text, url="#", cardimg="", cardimgalt=""} = Astro.props
+import Button from "./Button.astro"
+
+---
+
+
+<article>
+<h2>{header}</h2>
+<p>{text}</p>
+<img src={cardimg} alt={cardimgalt}>
+<Button type="primary"><a href="#">TILMELD NU</a></Button>
+<Button type="secondary"><a href="#">LÆS MERE</a></Button>
+
+
+
+</article>
