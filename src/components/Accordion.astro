@@ -1,64 +1,71 @@
 ---
-const { title, text, url = "#", bgImg = "", view = "destinationer" } = Astro.props;
-import Button from "./Button.astro";
+// Props modtages her
+const { title, text, view = "desktop" } = Astro.props;
 ---
+
 <article>
-    <ul id="accordion-toggle-container" class="mx-[10px] w-[350px] md:w-[900px] cursor-pointer">
-      <li class="list-none w-full p-[30px] mb-[10px] bg-yellow-450 rounded border border-orange-500">
-  
-        <!-- Clickable area (entire box) -->
+    <ul 
+      class={`mx-[10px] ${view === "mobile" ? "w-[350px]" : "md:w-[900px]"} cursor-pointer`}
+    >
+      <li 
+        class="list-none w-full p-[30px] mb-[10px] bg-yellow-450 rounded border border-orange-500 accordion"
+      >
+        <!-- Clickable header (fixed position, not part of the transition) -->
         <div 
-          class="md:p-[10px] flex gap-[1.5rem] md:gap-[3rem] items-center cursor-pointer text-green-500 font-h1 text-medium md:text-h1-desktop-S"
-          id=""
+          class={`p-[10px] flex items-center gap-[1.5rem] cursor-pointer font-h1 ${
+            view === "mobile" ? "text-h1-mobile-S" : "md:text-h1-desktop-S"
+          }`}
         >
-          <!-- Icon (Initially + green) -->
-          <span id="accordion-toggle" class="text-h1-mobile-L md:text-h1-desktop-L text-green-500 font-h1 w-[20px]">
+          <span 
+            class="accordion-toggle-icon icon text-orange-500 text-[20px] min-w-[20px] transition-all duration-300 ease-in-out"
+          >
             +
           </span>
           {title}
         </div>
   
-        <!-- Accordion content (hidden by default with transition for smooth fold) -->
-        <div 
-          id="accordion-content" 
-          class="content overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
-        >
-          <p class="mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">{text}</p>
+        <!-- Collapsible content (only this part will be animated) -->
+        <div class="accordion-content overflow-hidden max-h-0 opacity-0 invisible transition-all duration-300 ease-in-out">
+          <p 
+            class={`mx-[10px] text-body-mobile-regular ${
+              view === "mobile" ? "" : "md:text-body-desktop-regular"
+            } text-neutral-950 mt-4`}
+          >
+            {text}
+          </p>
         </div>
-  
       </li>
     </ul>
   </article>
   
   <script>
-    // Grab the elements
-    const accordionToggleContainer = document.getElementById('accordion-toggle-container');
-    const accordionToggle = document.getElementById('accordion-toggle');
-    const accordionContent = document.getElementById('accordion-content');
+    const accordions = document.querySelectorAll('.accordion');
   
-    // Set initial max-height to allow for smooth transition
-    let maxHeight = 0;
+    accordions.forEach((accordion) => {
+      const toggleIcon = accordion.querySelector('.accordion-toggle-icon');
+      const content = accordion.querySelector('.accordion-content');
   
-    // Function to toggle the accordion
-    accordionToggleContainer.addEventListener('click', () => {
-      const isOpen = accordionContent.classList.contains('max-h-0');
-      
-      if (isOpen) {
-        // If it's closed, show it and change the icon to "-"
-        maxHeight = accordionContent.scrollHeight; // Get the height of the content dynamically
-        accordionContent.classList.remove('max-h-0');
-        accordionContent.style.maxHeight = `${maxHeight}px`; // Set max-height to the actual content height
-        accordionToggle.textContent = '-';
-        accordionToggle.classList.add('text-orange-500'); // Add orange color for minus
-        accordionToggle.classList.remove('text-green-500'); // Remove green color for plus
-      } else {
-        // If it's open, hide it and change the icon to "+"
-        accordionContent.classList.add('max-h-0'); // Collapse with class
-        accordionContent.style.maxHeight = '0'; // Reset max-height to 0 for collapse
-        accordionToggle.textContent = '+';
-        accordionToggle.classList.add('text-green-500'); // Add green color for plus
-        accordionToggle.classList.remove('text-orange-500'); // Remove orange color for minus
-      }
+      accordion.addEventListener('click', () => {
+        const isOpen = content.style.maxHeight !== '0px';
+  
+        if (isOpen) {
+          // Close the accordion
+          content.style.maxHeight = '0px';
+          content.style.opacity = '0';
+          content.style.visibility = 'hidden';
+          toggleIcon.textContent = '+';
+          toggleIcon.classList.remove('text-orange-500');
+          toggleIcon.classList.add('text-green-500');
+        } else {
+          // Open the accordion
+          content.style.maxHeight = `${content.scrollHeight}px`; // Expands to content height
+          content.style.opacity = '1';
+          content.style.visibility = 'visible';
+          toggleIcon.textContent = '-';
+          toggleIcon.classList.remove('text-green-500');
+          toggleIcon.classList.add('text-orange-500');
+        }
+      });
     });
   </script>
   
