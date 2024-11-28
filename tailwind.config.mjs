@@ -95,7 +95,7 @@ export default {
           'body-mobile-bold': ['16px', { lineHeight: '25px', fontWeight: '700' }],
 
           // Qute text
-          'citat-desktop': ['68px',{ lineHeight: '100px', fontWeight: '300' }],
+          'citat-desktop': ['60px',{ lineHeight: '100px', fontWeight: '300' }],
           
          
           
@@ -122,7 +122,7 @@ export default {
             'button-mobile-x': '40px',   // horisontal padding til mobil
             'button-mobile-y': '12px',   // vertikal padding til mobil
            'padding-text-quote': '200px',
-           'padding-text-quote': '50px',
+           'padding-text-quote-s': '50px',
         
 
           },
