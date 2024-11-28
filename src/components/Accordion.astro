@@ -4,50 +4,59 @@ const { title, text, view = "desktop" } = Astro.props;
 ---
 
 <article>
-    <ul 
-      class={`mx-[10px] ${view === "mobile" ? "w-[350px]" : "md:w-[900px]"} cursor-pointer`}
+  <ul 
+    class={`mx-[10px] ${view === "mobile" ? "w-[350px]" : "md:w-[900px]"} cursor-pointer`}
+  >
+    <li 
+      class="list-none w-full p-[30px] mb-[10px] bg-yellow-450 rounded border border-orange-500 accordion"
     >
-      <li 
-        class="list-none w-full p-[30px] mb-[10px] bg-yellow-450 rounded border border-orange-500 accordion"
+      <!-- Clickable header -->
+      <div 
+        class={`accordion-header p-[10px] flex items-center gap-[1.5rem] cursor-pointer font-h1 ${
+          view === "mobile" ? "text-h1-mobile-S" : "md:text-h1-desktop-S"
+        }`}
       >
-        <!-- Clickable header (fixed position, not part of the transition) -->
-        <div 
-          class={`p-[10px] flex items-center gap-[1.5rem] cursor-pointer font-h1 ${
-            view === "mobile" ? "text-h1-mobile-S" : "md:text-h1-desktop-S"
-          }`}
+        <span 
+          class="accordion-toggle-icon icon text-green-500 text-[20px] min-w-[20px] transition-all duration-300 ease-in-out"
         >
-          <span 
-            class="accordion-toggle-icon icon text-orange-500 text-[20px] min-w-[20px] transition-all duration-300 ease-in-out"
-          >
-            +
-          </span>
-          {title}
-        </div>
-  
-        <!-- Collapsible content (only this part will be animated) -->
-        <div class="accordion-content overflow-hidden max-h-0 opacity-0 invisible transition-all duration-300 ease-in-out">
-          <p 
-            class={`mx-[10px] text-body-mobile-regular ${
-              view === "mobile" ? "" : "md:text-body-desktop-regular"
-            } text-neutral-950 mt-4`}
-          >
-            {text}
-          </p>
-        </div>
-      </li>
-    </ul>
-  </article>
-  
-  <script>
+          +
+        </span>
+        <span class="flex-grow">{title}</span> <!-- Ensures title takes full width -->
+      </div>
+
+      <!-- Collapsible content -->
+      <div class="accordion-content overflow-hidden max-h-0 opacity-0 invisible transition-all duration-300 ease-in-out">
+        <p 
+          class={`mx-[10px] text-body-mobile-regular ${
+            view === "mobile" ? "" : "md:text-body-desktop-regular"
+          } text-neutral-950 mt-4`}
+        >
+          {text}
+        </p>
+      </div>
+    </li>
+  </ul>
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
     const accordions = document.querySelectorAll('.accordion');
-  
+
     accordions.forEach((accordion) => {
       const toggleIcon = accordion.querySelector('.accordion-toggle-icon');
       const content = accordion.querySelector('.accordion-content');
-  
+
+      // Initialize state
+      content.style.maxHeight = '0px';
+      content.style.opacity = '0';
+      content.style.visibility = 'hidden';
+      toggleIcon.textContent = '+';
+      toggleIcon.classList.remove('text-orange-500');
+      toggleIcon.classList.add('text-green-500');
+
       accordion.addEventListener('click', () => {
         const isOpen = content.style.maxHeight !== '0px';
-  
+
         if (isOpen) {
           // Close the accordion
           content.style.maxHeight = '0px';
@@ -58,7 +67,7 @@ const { title, text, view = "desktop" } = Astro.props;
           toggleIcon.classList.add('text-green-500');
         } else {
           // Open the accordion
-          content.style.maxHeight = `${content.scrollHeight}px`; // Expands to content height
+          content.style.maxHeight = `${content.scrollHeight}px`;
           content.style.opacity = '1';
           content.style.visibility = 'visible';
           toggleIcon.textContent = '-';
@@ -67,5 +76,5 @@ const { title, text, view = "desktop" } = Astro.props;
         }
       });
     });
-  </script>
-  
+  });
+</script>

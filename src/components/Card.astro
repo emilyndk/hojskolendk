@@ -6,22 +6,21 @@ import Button from "./Button.astro";
 <article 
   class={`relative ${view === "destinationer" ? "destinationer-card" : "aktiviteter-card"} 
   bg-cover bg-center h-[500px] w-[350px] rounded overflow-hidden p-[20px] m-[10px]`} 
-  style={`background-image: url(${bgImg})`}>
+  style={`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImg});`}>
 
   <div 
     class={`flex flex-col justify-between h-full p-4 relative bg-opacity-70 bg-black`}>
     
     {view === "destinationer" ? (
       <>
-       <h1 class="text-center text-yellow-500 border border-yellow-500 
-  rounded m-4 p-card-34 pb-[60px] font-display text-display-desktop-card">
-  {header.split('\n').map((line) => (
-    <>
-      {line} <br />
-    </>
-  ))}
-</h1>
-
+        <h1 class="text-center text-yellow-500 border border-yellow-500 
+          rounded m-4 p-card-34 pb-[60px] font-display text-display-desktop-card">
+          {header.split('\n').map((line) => (
+            <>
+              {line} <br />
+            </>
+          ))}
+        </h1>
 
         <p class="font-body text-yellow-500 text-body-mobile-regular md:text-body-desktop-regular text-center">{text}</p>
 
@@ -31,7 +30,7 @@ import Button from "./Button.astro";
       </>
     ) : (
       <>
-        <div class="flex flex-col justify-center flex-grow gap-[1rem]"> 
+        <div class=" flex flex-col justify-center flex-grow gap-[1rem]"> 
           <h1 class="text-center text-yellow-500 border border-yellow-500 
             rounded m-4 p-[15px] text-display-mobile-card font-display md:text-[2rem]">
             {header}
@@ -40,10 +39,11 @@ import Button from "./Button.astro";
           <p class="font-body text-yellow-500 text-h2-mobile-S md:text-h2-desktop-S text-center">{text}</p>
         </div>
 
-        <Button type="secondary" class="mx-auto "> <!-- Adds more space between the text and button -->
+        <Button type="secondary" class="mx-auto">
           <a href={url}>LÆS MERE</a>
         </Button>
       </>
     )}
   </div>
 </article>
+
