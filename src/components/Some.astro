@@ -1,0 +1,20 @@
+---
+const { imageUrl, text } = Astro.props;
+---
+
+<div class="relative w-[400px] h-[400px] group">
+  <!-- Dynamisk billede -->
+  <img 
+    src={imageUrl} 
+    alt="Example Image" 
+    class="w-full h-full object-cover rounded"
+  />
+
+  <!-- Overlay med dynamisk tekst -->
+  <div 
+    class="absolute inset-0 bg-orange-500 bg-opacity-90 flex items-center justify-center text-white text-xl font-bold rounded opacity-0">
+    {text}
+  </div>
+</div>
+
+
