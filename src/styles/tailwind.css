@@ -15,3 +15,15 @@
     font-style: normal;
   }
 
+  #bg{
+    background-color: #2D3F27;
+    /* Stræk billedet horisontalt til at dække alle slides */
+    
+  }
+
+  #string{
+    background-image: url('/public/images/orangethread.svg');
+    background-size: cover; /* Stræk billedet horisontalt til at dække alle slides */
+  }
+
+ 
