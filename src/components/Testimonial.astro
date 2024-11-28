@@ -1,5 +1,5 @@
 <section 
-  class="relative grid grid-rows-2 grid-cols-1 lg:grid-cols-2" 
+  class="relative grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2" 
   x-data="{ activeSlide: 0, testimonials: [
     { 
       text: '“Mit ophold med HöjskolenDk var den største oplevelse i mit liv”', 
@@ -51,7 +51,7 @@
   </div>
 
   <!-- Overlappende billede og tekst -->
-  <div class="absolute w-1/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+  <div class="absolute w-1/3 lg:w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
     <img 
       :src="testimonials[activeSlide].profileImg" 
       alt="Profilbillede" 
