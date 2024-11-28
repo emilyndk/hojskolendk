@@ -5,14 +5,29 @@ import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Testimonial from "../components/Testimonial.astro";
 import Accordion from "../components/Accordion.astro";
+import Horisontal from "../components/Scrolling.astro";
 
 ---
 
 <MainLayout title="Hojskolendk">
 <Hero></Hero>
-<Testimonial></Testimonial>
 
-<Button type="secondary">TILMELD NU</Button>
+ <!-- Section Destinationer -->
+
+ <div class="flex flex-col gap-[0.5rem]">
+  <h1 class="mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Destinationer</h1>
+  <h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">DIT LIVS EVENTYR VENTER</h2>
+  </div>
+
+ <Card 
+  header={`CARIBIEN\nHAWAII\nMEXICO`} 
+  text="Nordamerika Mellemamerika"
+  bgImg="/images/midlertidig-card-img.jpg"
+  url="" 
+  view="destinationer" 
+/>
+
+  <!-- Section Om os -->
 
 <section class="p-section-mobile-32 lg:p-section-72 lg:mx-margin-box-desktop">
   <div class="border border-orange-500 rounded bg-yellow-500 bg-opacity-50 lg:px-padding-box-desktop ">
@@ -31,50 +46,9 @@ import Accordion from "../components/Accordion.astro";
 </div>
 </section>
 
-<Card cardimg="/svg/logo.svg" cardimgalt="haha" header="hej verden" text="Lorem ipsum dollar">
-
-
-	
-
-<div class="flex flex-col gap-[0.5rem]">
-<h1 class="mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Destinationer</h1>
-<h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">DIT LIVS EVENTYR VENTER</h2>
-</div>
-
-<Card 
-  header={`CARIBIEN\nHAWAII\nMEXICO`} 
-  text="Nordamerika Mellemamerika"
-  bgImg="/images/midlertidig-card-img.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-
-<article class=" bg-yellow-450 border rounded border-orange-500 w-[350px] md:w-[900px] p-[30px] mx-auto my-card-34">
-<div class="flex flex-col mb-card-34">
-  <div class="flex flex-col gap-[0.5rem]">
-    <h1 class="text-green-500 mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Højskole i udlandet</h1>
-    <h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">ER DU KLAR TIL DIT LIVS EVENTYR?</h2>
-    </div>
-
-    <p class="mx-[10px] text-body-mobile-regular md:text-body-desktop-regular text-neutral-950">
-
-      Vi er en dansk højskole for dig imellem 18-30år, der ønsker en unik rejseoplevelse, og muligheden for at blive en del af et stort fællesskab, møde nye mennesker og forskellige  kulturer. Derfor laver vi, HöJSKOLENDK, eventyrlige højskoleophold i udlandet. 
-
-HOJSKOLENDK er for dig som synes det er spændende at tage på højskole i udlandet og er vild med tanken om højskolefællesskabet. Ønsker at komme med på et fantastisk rejseeventyr, gerne vil lære om nye kulturer, er vild med tanken om at rejse med rygsæk, drømmer om en fed grupperejse med andre unge og følelsen af et stærkt sammenhold. Det er for dig der ønsker inspirerende og meningsfulde aktiviteter der giver dig noget med hjem og samtidig ønsker en tryg rejseoplevelse hvor vi har taget os af alt det praktiske og ikke skal bekymre dig om forsikring, da vi er medlem af rejsegarantifonden. 
-
-Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse. 
-    </p>
-
-  </div>
-
-  <div class="flex flex-col items-center">
-    <Button class="mx-auto" type="secondary">OM OS</Button>
-  </div>
-
-</article>
-
 <Testimonial></Testimonial>
+
+  <!-- Section 5 grunde -->
  
 <article class=" bg-yellow-450 border rounded border-orange-500 w-[350px] md:w-[900px] p-[30px] mx-auto my-card-34">
   <div class="flex flex-col mb-card-34">
@@ -134,9 +108,6 @@ Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse.
       Vil du vide mere om hvorfor du skal vælge os? Kom og mød os på vores infomøde.
          
     </p>
-
-
-  
      
   
     </div>
@@ -147,6 +118,8 @@ Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse.
   
   </article>
 
+    <!-- Section aktiviteter -->
+
 
   <div class="flex flex-col gap-[0.5rem]">
     <h1 class="mt-[30px] text-center font-h1 text-h1-mobile-L md:text-h1-desktop-L">Aktiviteter</h1>
@@ -154,9 +127,6 @@ Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse.
     </div>
 
 	
-
-
-
 <Card 
   header="KULTURFORSTÅELSE" 
   text="ALLE DESTINATIONER"
@@ -165,7 +135,12 @@ Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse.
   view="aktiviteter" 
 />
 
+ <!-- Section Horisontal scrolling -->
 
+
+
+
+  <!-- Section Fold ud -->
 
 <div class="flex flex-col items-center md:flex-row">
 <Accordion 
@@ -188,7 +163,15 @@ Vi glæder os til at rejse med dig og give dig din ultimative bedste oplevelse.
 />
 </div>
 
+<!-- Section Trees -->
 
+<!-- Section Banner -->
+
+<!-- Section SoMe --> 
+
+<!-- Section FAQ -->
+
+<!-- Section Footer -->
 
 
 
