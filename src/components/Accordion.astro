@@ -12,7 +12,7 @@ const { title, text, view = "desktop" } = Astro.props;
     >
       <!-- Clickable header -->
       <div 
-        class={`accordion-header p-[10px] flex items-center gap-[1.5rem] cursor-pointer font-h1 ${
+        class={`accordion-header p-[10px] flex items-center gap-[1.5rem] cursor-pointer font-h1 text-green-500 ${
           view === "mobile" ? "text-h1-mobile-S" : "md:text-h1-desktop-S"
         }`}
       >
@@ -31,9 +31,9 @@ const { title, text, view = "desktop" } = Astro.props;
       <!-- Collapsible content -->
       <div class="accordion-content overflow-hidden max-h-0 opacity-0 invisible transition-all duration-300 ease-in-out">
         <p 
-          class={`mx-[10px] text-body-mobile-regular ${
+          class={`mx-[10px] text-body-mobile-regular text-green-500 ${
             view === "mobile" ? "" : "md:text-body-desktop-regular"
-          } text-neutral-950 mt-4`}
+          } text-green-500 mt-4`}
         >
           {text}
         </p>
