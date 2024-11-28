@@ -26,4 +26,10 @@
     background-size: cover; /* Stræk billedet horisontalt til at dække alle slides */
   }
 
- 
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-snap-align-center {
+    scroll-snap-align: center;
+}

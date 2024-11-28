@@ -1,13 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Testimonial from "../components/Testimonial.astro";
 import Accordion from "../components/Accordion.astro";
 import Banner from "../components/Banner.astro";
 import Horisontal from "../components/Scrolling.astro";
 import Scrolling from "../components/Scrolling.astro";
+import Karussel from "../components/Karussel.astro";
 
 ---
 
@@ -21,73 +21,7 @@ import Scrolling from "../components/Scrolling.astro";
   <h2 class="mb-[30px] text-center font-h1 text-h2-mobile-S md:text-h2-desktop-S">DIT LIVS EVENTYR VENTER</h2>
   </div>
 
- <Card 
-  header={`CARIBIEN\nHAWAII\nMEXICO`} 
-  text="NORDAMERIKA & MELLEMAMERIKA"
-  bgImg="/images/d-card-5.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-
-<Card 
-  header={`JAPAN\nAUSTRALIEN\nBALI\nGILI ISLAND`} 
-  text="ASIEN & OCEANIEN"
-  bgImg="/images/d-card-6.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`COSTA RICA\nMEXICO\nCOLUMBIA`} 
-  text="MELLEMAMERIKA & SYDAMERIKA"
-  bgImg="/images/d-card-3.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`INDIEN\nTHAILAND\nNEPAL\nVIETNAM`} 
-  text="ASIEN"
-  bgImg="/images/d-card-2.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`AUSTRALIEN\nNEW ZEALAND\nBALI`} 
-  text="OCEANIEN"
-  bgImg="/images/d-card-1.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`MALDIVERNE\nBALI\nSRI LANKA\nGILI ISLAND`} 
-  text="ASIEN & OCEANIEN"
-  bgImg="/images/d-card-4.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`BRASILIEN\nCOLUMBIA\nPERU`} 
-  text="SYDAMERIKA"
-  bgImg="/images/d-card-3.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-<Card 
-  header={`BALI\nLOMBOK\nGILI ISLAND`} 
-  text="OCEANIEN"
-  bgImg="/images/d-card-7.jpg"
-  url="" 
-  view="destinationer" 
-/>
-
-
-
+  <div class=""><Karussel></Karussel></div>
 
   <!-- Section Om os -->
 
@@ -189,6 +123,7 @@ import Scrolling from "../components/Scrolling.astro";
     </div>
 
 	
+<<<<<<< HEAD
 <Card 
   header="KULTURFORSTÅELSE" 
   text="ALLE DESTINATIONER"
@@ -238,6 +173,9 @@ import Scrolling from "../components/Scrolling.astro";
   url=""
   view="aktiviteter" 
 />
+=======
+
+>>>>>>> 98043676a654556f39f22b54d086e2b7ceea5461
 
  <!-- Section Horisontal scrolling -->
 
