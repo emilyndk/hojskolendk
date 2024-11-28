@@ -26,9 +26,16 @@ export default {
         'card-106': '106px',
         'card-124': '124px',
         'section-72': '72px',
-        'padding-y': '16px',
+        'padding': '16px',
         'section-mobile-32': '32px',
-       
+        'padding-box-desktop': '150px',
+        'margin-box-desktop': '300px',
+        'padding-box-mobil': '40px',
+        'padding-box-mobil-none': '0px',
+        'padding-mobil-L': '10px',
+        'padding-mobil-S': '5px',
+
+  
         
       },
   
@@ -115,6 +122,7 @@ export default {
             'button-mobile-x': '40px',   // horisontal padding til mobil
             'button-mobile-y': '12px',   // vertikal padding til mobil
            'padding-text-quote': '200px',
+           'padding-text-quote': '50px',
         
 
           },
