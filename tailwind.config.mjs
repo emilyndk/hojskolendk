@@ -69,7 +69,7 @@ export default {
           // Display
           'display-desktop-hero': ['145px', { lineHeight: '140%' }],
           'display-mobile-hero': ['48px', { lineHeight: '140%'  }],
-          'display-desktop-card': ['48px', { lineHeight: '67px' }],
+          'display-desktop-card': ['40px', { lineHeight: '50px' }],
           'desktop-hero': ['138px', { lineHeight: '140%' }],
           'display-mobile-hero': ['45px', { lineHeight: '140%'  }],
           'display-mobile-card': ['48px', { lineHeight: '67px' }],

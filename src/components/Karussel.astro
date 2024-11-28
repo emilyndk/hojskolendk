@@ -1,0 +1,149 @@
+---
+import Card from "./Card.astro"
+
+---
+
+
+    
+<div class="relative">
+    <!-- Karussel-containeren med kortene -->
+    <div class="flex flex-row items-start h-[550px] gap-8 overflow-x-auto scroll-snap-x mandatory scroll-smooth w-full">
+      <!-- Card 1 -->
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/caribien-hawaii-mexico/" target="_blank">
+          <Card 
+            header={`CARIBIEN\nHAWAII\nMEXICO`} 
+            text="NORDAMERIKA & MELLEMAMERIKA"
+            bgImg="/images/hawaii.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/hoejskole-australien-new-zealand-bali-gili/" target="_blank">
+          <Card 
+            header={`AUSTRALIEN\nNEWZEALAND\nBALI\nGILIISLAND`} 
+            text="OCEANIEN"
+            bgImg="/images/australien.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/hoejskole-costa-rica-mexico-colombia/" target="_blank">
+          <Card 
+            header={`COSTA RICA\nMEXICO\nCOLUMBIA`} 
+            text="MELLEMAMERIKA & SYDMAMERIKA"
+            bgImg="/images/mexico.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/hoejskole-indien-nepal-thailand-vietnam-sri-lanka/" target="_blank">
+          <Card 
+            header={`INDIEN\nNEPAL\nTHAILAND\nVIETNAM\nSRI-LANKA`} 
+            text="ASIEN"
+            bgImg="/images/indien.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/hawaii-australien-japan-bali-gili-islands/" target="_blank">
+          <Card 
+            header={`HAWAII\nAUSTRALIEN\nJAPAN\nBALI\nGILI-ISLAND`} 
+            text="ASIEN & OCEANIEN"
+            bgImg="/images/bali.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/maldiverne-sri-lanka-bali-gili-islands/" target="_blank">
+          <Card 
+            header={`MALDIVERNE\nSRI-LANKA\nBALI\nGILI-ISLAND`} 
+            text="ASIEN & OCEANIEN"
+            bgImg="/images/caribien.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/sydamerika/" target="_blank">
+          <Card 
+            header={`BRASILIEN\nBOLIVIA\nCOLUMBIA\nEQUADOR\nPERU\nARGENTINA`} 
+            text="SYDAMERIKA"
+            bgImg="/images/gili-island.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+      <div class="m-4 w-[400px] h-[250px] transition-all ease-in-out hover:scale-105 scroll-snap-align-center">
+        <a href="https://www.hojskolendk.dk/hoejskoleophold/australien-japan-bali-gili-islands/" target="_blank">
+          <Card 
+            header={`AUSTRALIEN\nJAPAN\nBALI\nGILI-ISLAND`} 
+            text="OCEANIEN & ASIEN"
+            bgImg="/images/japan.png"
+            url="" 
+            view="destinationer" 
+          />
+        </a>
+      </div>
+  
+      <!-- Tilføj flere kort her -->
+      <!-- Card 2, Card 3, Card 4, osv. -->
+  
+    </div>
+  
+    <!-- Pilene til navigation -->
+    <button 
+      id="prevBtn" 
+      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full z-10">
+      &#8592;
+    </button>
+    <button 
+      id="nextBtn" 
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full z-10">
+      &#8594;
+    </button>
+  </div>
+  
+  <script>
+    // Hent karussel-containeren og pilene
+    const carousel = document.querySelector(".flex");
+    const prevBtn = document.querySelector("#prevBtn");
+    const nextBtn = document.querySelector("#nextBtn");
+  
+    // Indeks til at holde styr på den aktuelle position
+    let index = 0;
+    const totalItems = carousel.children.length;
+  
+    // Funktion til at opdatere karussellens position baseret på index
+    function updateCarousel() {
+      // Beregn den ønskede forskydning
+      const offset = -index * 400; // 400px er bredden af hvert kort
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  
+    // Forrige pil
+    prevBtn.addEventListener("click", () => {
+      index = (index > 0) ? index - 1 : totalItems - 1; // Hvis vi er på første kort, gå til sidste
+      updateCarousel();
+    });
+  
+    // Næste pil
+    nextBtn.addEventListener("click", () => {
+      index = (index < totalItems - 1) ? index + 1 : 0; // Hvis vi er på sidste kort, gå til første
+      updateCarousel();
+    });
+  </script>
+  
