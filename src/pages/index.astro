@@ -9,7 +9,8 @@ import Horisontal from "../components/Scrolling.astro";
 import Scrolling from "../components/Scrolling.astro";
 import Karussel from "../components/Karussel.astro";
 import Card from "../components/Card.astro";
-import Slider from "../components/Slider.astro"
+import Slider from "../components/Slider.astro";
+import ImageOverlay from "../components/Some.astro";
 
 ---
 
@@ -179,6 +180,65 @@ view="mobile"
 <Banner></Banner>
 
 <!-- Section SoMe --> 
+
+<section class="grid grid-cols-2 md:grid-cols-4 gap-card-34">
+  <!-- Billede 1 -->
+  <ImageOverlay 
+    imageUrl="/images/some-1.JPG" 
+    text="Dette er billede 1" 
+    class="w-full h-auto object-cover"
+  />
+
+  <!-- Billede 2 -->
+  <ImageOverlay 
+    imageUrl="/images/some-2.jpeg" 
+    text="Dette er billede 2" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+  <!-- Billede 3 -->
+  <ImageOverlay 
+    imageUrl="/images/some-3.jpeg" 
+    text="Dette er billede 3" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+  <!-- Billede 4 -->
+  <ImageOverlay 
+    imageUrl="/images/some-4.jpeg" 
+    text="Dette er billede 4" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+    <!-- Billede 5 -->
+    <ImageOverlay 
+    imageUrl="/images/some-5.jpeg" 
+    text="Dette er billede 1" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+  <!-- Billede 6 -->
+  <ImageOverlay 
+    imageUrl="/images/some-6.jpeg" 
+    text="Dette er billede 2" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+  <!-- Billede 7 -->
+  <ImageOverlay 
+    imageUrl="/images/some-7.jpeg" 
+    text="Dette er billede 3" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+
+  <!-- Billede 8 -->
+  <ImageOverlay 
+    imageUrl="/images/some-8.jpeg" 
+    text="Dette er billede 4" 
+    class="w-full h-auto aspect-square object-cover"
+  />
+</section>
+
 
 <!-- Section FAQ -->
 
