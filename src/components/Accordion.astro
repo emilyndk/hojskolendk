@@ -21,7 +21,11 @@ const { title, text, view = "desktop" } = Astro.props;
         >
           +
         </span>
-        <span class="flex-grow">{title}</span> <!-- Ensures title takes full width -->
+        <span class="flex-grow">{title .split('\n').map((line) => (
+          <>
+            {line} <br />
+          </>
+        ))}</span> <!-- Ensures title takes full width -->
       </div>
 
       <!-- Collapsible content -->
