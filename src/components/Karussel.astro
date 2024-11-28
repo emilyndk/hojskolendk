@@ -105,24 +105,13 @@ import Card from "./Card.astro"
     </div>
   
     <!-- Pilene til navigation -->
-    <button 
-      id="prevBtn" 
-      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full z-10">
-      &#8592;
-    </button>
-    <button 
-      id="nextBtn" 
-      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full z-10">
-      &#8594;
-    </button>
+   
   </div>
   
   <script>
     // Hent karussel-containeren og pilene
     const carousel = document.querySelector(".flex");
-    const prevBtn = document.querySelector("#prevBtn");
-    const nextBtn = document.querySelector("#nextBtn");
-  
+    
     // Indeks til at holde styr på den aktuelle position
     let index = 0;
     const totalItems = carousel.children.length;
@@ -134,16 +123,5 @@ import Card from "./Card.astro"
       carousel.style.transform = `translateX(${offset}px)`;
     }
   
-    // Forrige pil
-    prevBtn.addEventListener("click", () => {
-      index = (index > 0) ? index - 1 : totalItems - 1; // Hvis vi er på første kort, gå til sidste
-      updateCarousel();
-    });
-  
-    // Næste pil
-    nextBtn.addEventListener("click", () => {
-      index = (index < totalItems - 1) ? index + 1 : 0; // Hvis vi er på sidste kort, gå til første
-      updateCarousel();
-    });
   </script>
   
